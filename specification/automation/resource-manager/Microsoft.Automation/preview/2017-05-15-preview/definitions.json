@@ -1381,10 +1381,6 @@
     },
     "SourceControlSyncJobCreateProperties": {
       "properties": {
-        "commitId": {
-          "type": "string",
-          "description": "Sets the commit id of the source control sync job."
-        }
       },
       "description": "Definition of create source control sync job properties."
     },
