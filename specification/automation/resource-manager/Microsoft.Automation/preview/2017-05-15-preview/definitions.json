@@ -1374,9 +1374,6 @@
           "description": "Sets the properties of the source control sync job."
         }
       },
-      "required": [
-        "properties"
-      ],
       "description": "The parameters supplied to the create source control sync job operation."
     },
     "SourceControlSyncJobCreateProperties": {
