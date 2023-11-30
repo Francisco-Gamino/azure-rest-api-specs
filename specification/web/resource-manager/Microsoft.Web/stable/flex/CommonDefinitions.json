@@ -3587,11 +3587,11 @@
       }
     },
     "FunctionsDeployment": {
-      "description": "TBD",
+      "description": "Azure Functions deployment configuration.",
       "type": "object",
       "properties": {
         "storage": {
-          "description": "TBD",
+          "description": "TBD.",
           "type": "object",
           "properties": {
             "type": {
@@ -3611,12 +3611,26 @@
                   "type": "string"
                 },
                 "value": {
-                  "description": "Trigger based on status code.",
-                  "type": "TBD"
+                  "description": "TBD.",
+                  "type": "string"
                 }
               }
             }
           }
+        }
+      }
+    },
+    "AlwaysReadyItem": {
+      "type": "object",
+      "description": "TBD",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "TBD"
+        },
+        "instanceCount": {
+          "type": "number",
+          "description": "TBD"
         }
       }
     },
@@ -3628,15 +3642,33 @@
           "description": "TBD",
           "type": "array",
           "items": {
-            // TBD
+            "$ref": "#/definitions/AlwaysReadyItem",
+            "description": "Azure Functions config for the 'always ready' feature." 
           }
+        },
+        "maximumInstanceCount": {
+          "description": "TBD",
+          "type": "number"
         },
         "instanceMemoryMB": {
           "description": "TBD",
           "type": "number"
         },
         "triggers": {
-          // TBD
+          "type": "object",
+          "description": "TBD",
+          "properties": {
+            "http": {
+              "type": "object",
+              "description": "TBD",
+              "properties": {
+                "perInstanceConcurrency": {
+                  "type": "number",
+                  "description": "TBD"
+                }
+              }
+            }
+          }
         }
 
       }
