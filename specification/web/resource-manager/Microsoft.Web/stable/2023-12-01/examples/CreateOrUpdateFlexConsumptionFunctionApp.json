@@ -161,7 +161,7 @@
             "scaleAndConcurrency": {
               "alwaysReady": [
               ],
-              "maximumInstanceCount": 50,
+              "maximumInstanceCount": 100,
               "instanceMemoryMB": 2048,
               "triggers": {
                 "http": {
