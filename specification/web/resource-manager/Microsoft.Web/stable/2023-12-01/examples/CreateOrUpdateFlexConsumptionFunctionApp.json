@@ -36,6 +36,7 @@
             "version": "3.11"
           },
           "scaleAndConcurrency": {
+            "maximumInstanceCount": 100,
             "instanceMemoryMB": 2048
           }
         }
@@ -159,10 +160,6 @@
             },
             "scaleAndConcurrency": {
               "alwaysReady": [
-                {
-                  "name": "http",
-                  "instanceCount": 2
-                }
               ],
               "maximumInstanceCount": 50,
               "instanceMemoryMB": 2048,
@@ -312,16 +309,12 @@
             },
             "scaleAndConcurrency": {
               "alwaysReady": [
-                {
-                  "name": "http",
-                  "instanceCount": 2
-                }
               ],
-              "maximumInstanceCount": 50,
+              "maximumInstanceCount": 100,
               "instanceMemoryMB": 2048,
               "triggers": {
                 "http": {
-                  "perInstanceConcurrency": 16
+                  "perInstanceConcurrency": null
                 }
               }
             }
