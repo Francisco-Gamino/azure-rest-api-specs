@@ -17,6 +17,10 @@
             {
               "name": "FUNCTIONS_EXTENSION_VERSION",
               "value": "~4"
+            },
+            {
+              "name": "APPLICATIONINSIGHTS_CONNECTION_STRING",
+              "value": "InstrumentationKey=Sanitized;IngestionEndpoint=Sanitized;LiveEndpoint=Sanitized"
             }
           ]
         },
@@ -36,7 +40,19 @@
             "version": "3.11"
           },
           "scaleAndConcurrency": {
-            "instanceMemoryMB": 2048
+          "alwaysReady": [
+            {
+              "name": "http",
+              "instanceCount": 2
+            }
+            ],
+            "maximumInstanceCount": 50,
+            "instanceMemoryMB": 2048,
+            "triggers": {
+              "http": {
+                "perInstanceConcurrency": 16
+              }
+            }
           }
         }
       }
